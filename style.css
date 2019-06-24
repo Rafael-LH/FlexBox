@@ -1,0 +1,115 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    border: 1px solid #d00f36;
+    padding: 10px;
+    height: 80vh;
+
+    /* FLEX */
+    display: flex; 
+    /*flex-wrap: wrap; /* wrap-reverse igual como todos los reverse nos cambia el orden de nuestros items*/
+
+    /* Nos mando nuestro contenido hasta el final derecha -> y cambiar el orden es decir item 4 item 3 item 2 item 1 */
+    /* flex-direction: row-reverse;  */
+
+    /* aqui tenemos un atajo con flex-flow el cual el primer valor es el de flex direction y el segundo es el de flex warp */
+    /* flex-flow: column wrap; */
+
+    /*justify-content lo que hace es distribuir nuestro espacio que tenemos de sobra entre nuestros items 
+      en este caso lo ponemos centrado */
+    /* justify-content: center;  */
+
+    /*justify-content: flex-end; /*nos manda nuestro contenido al final ->*/
+
+    /*nos distribulle nuesros elementos de modo que abarquen todo el ancho de nuestro contenedor*/
+    /* justify-content: space-between; */
+
+    /* space-around a direfencia de space-between este deja un espacio al inicio y al final de nuestros items es decir
+    space-around  -> espacio item espacio item espacio item espacio
+    space-between -> item espacio item espacio item */
+    /* justify-content: space-around; */
+    
+    /* nos posiciona los elementos al final de la parde de abajo de nuestro contenedor, es decir se va hasta abajo  dependiendo
+    del alto de nuestro contenedor */
+    /* align-items: flex-end;  */
+    
+    /* centra los elementos verticalmente */
+    /* align-items: center; */
+    
+    /* lo que hace esta propiedad es que todos nuestros items abarquen el 100% del alto de nuestro contenedor, como nota tenemos que 
+    tener en cuenta que no debemos tener un valor de alto seteado en nuestos items porque no funcionara  */
+    /* align-items: stretch; */
+
+    /* centra un grupo de items verticalmente, es decir si tenemos dos filas las dos filas las centrara y eso no lo podemos hacer con align-items: center 
+      porque align-items: center solo centra fila por fila y deja un enpacio de arriba para abajo (no lo dejara pegado) entre cada fila de items,
+      entonces de la siguiente manera y con este grupo de propiedades podemos dejar nuestro contenido centrado en cualquier momento
+      y responsivo*/
+      /* flex-wrap: wrap;
+      justify-content: center; */
+      /* align-content: center; */
+
+      /*nos posiciona un grupo de elementos al final de la parde de abajo de nuestro contenedor,
+        es decir se va hasta abajo dependiendo del alto de nuestro contenedor */
+      /* align-content: flex-end; */
+
+        /* si tenemos dos filas de items lo que hara es dejar la primera fila de items hasta arriba y la segundo hasta abajo del alto 
+        de nuestro contenedor */
+        /* align-content: space-between */
+
+        /* a diferencia de align-content: space-between este lo que hace es dejar un espacio arriba de la primera fila de items despues 
+        abajo de la primera fila de items y despues abajo de la segunda fila de items es decir.
+        align-content: space-between; itmesFila espacio itemsFila todo esto verticalmente
+        align-content: space-around; espacio itmesFila espacio itemsFila espacio todo esto verticalmente */
+        /* align-content: space-around; */
+
+        /* nuestra propiedad justify-content: alinea como podiamos ver verticalmente pero si ponemos despues la propeidad flex-direction: column;
+        ya no nos alienara verticalmente la propiedad justify-content , esto por que ? porque el justify-content centra en vase a su eje 
+        principal entonces si nosotros ponemos nuestro eje principal en columna lo que hara justify-content es alinear verticalmente y no 
+        hotizontalmente, entonces hay que tener muy en cuenta esto, y en este caso lo que hacemos para alinear horizotalmente si nuestro eje 
+        principal esta en vertical ? pues utilizamos align-items: center; que lo que hara sera alinear horizontalmente es decir en contra del
+        eje principal    */
+        /* flex-direction: column;
+        justify-content: center;    
+        align-items: center; */
+
+
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    
+}
+
+
+.container div {
+        width: 170px;
+        height: 90px;
+        text-align: center;
+        background: #fc466b;
+        margin: 5px;
+        border-radius: 5px;
+        color: #fff;
+        /* grupo 2 de ordernar */
+        order: 2;
+}
+    /* ANIMACIONES */
+/* .container:hover  div:nth-child(2){
+            transition: all 1.5s;
+            transform: rotate(360deg) translateX(180px);
+}
+.container:hover  div:nth-child(3){
+    transition: all 1.5s;
+    transform: rotate(-360deg) translateX(-180px);
+} */
+div:nth-child(2){
+        /* con la propiedad order podemos cambiar el orden de nuestros elementos de html en este caso nuestro item 1 quedara en 
+        donde estaba el item 4 pero si a mis otros elemnetos les digo que tengan el order: 2 y este elemento order:1 
+        lo que hara este mi item 2 estara en donde estaba el 1 y los demas seguiran igual es decir 
+        item2 item1 item3 item4, esto por que? porque le indico que mi elemento 2 tendra el orden de 1 osea que es como si tomara 
+        dos grupos el primero seria mi elemento 2 y el segundo grupo seria mi elemento 1, 3 y 4 y lo que hago es poner en el 
+        order 1 que es el grupo 1 mi elemento 2 y en mi grupo 2 que estan mis elmentos 1,3 y 4 los pongo seguido de mi primer grupo 
+        que es donde esta mi elemento 2*/
+
+        /* grupo 1 de ordenar */
+        order: 1;
+}
